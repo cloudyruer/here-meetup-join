@@ -1,0 +1,105 @@
+.j-join-select {
+  &__drop {
+    margin-top: 5px;
+    margin-bottom: 5px;
+
+    margin-right: 9px;
+    &:first-child {
+      margin-left: 9px;
+    }
+
+    @include respond(team-lg) {
+      margin-top: 15px;
+
+      &:first-child {
+        margin-left: 0px;
+      }
+      &:last-child {
+        margin-right: 0px;
+      }
+    }
+  }
+}
+
+.j-join-bar {
+  position: absolute;
+  bottom: 0;
+  z-index: 1;
+  height: 30vh;
+
+  // test
+  &--vh5 {
+    height: 5vh;
+  }
+
+  //  FIX
+  background-color: #ccc;
+  @include respond(team-lg) {
+    position: initial;
+    // NOTE FIX 56px 是 nav 高度
+    height: calc(100vh - 56px);
+  }
+}
+
+.j-join-map {
+  // FIX
+  background-color: $team-warning;
+  // NOTE FIX 56px 是 nav 高度
+  height: calc(100vh - 48px - 56px);
+  @include respond(team-lg) {
+    // NOTE FIX 56px 是 nav 高度
+    height: calc(100vh - 56px);
+  }
+}
+
+.j-join-info-box {
+  margin-top: 15px;
+  //   margin-bottom: 15px;
+  overflow: auto;
+  padding: 15px;
+  border: 3px solid $team-primary;
+  //   height: 75vh;
+  height: 91%;
+
+  //   new
+  display: flex;
+
+  @include respond(team-lg) {
+    display: block;
+  }
+}
+
+.box {
+  //   new
+  width: 300px;
+  height: 220px;
+  flex-shrink: 0;
+
+  @include respond(team-lg) {
+    flex-shrink: initial;
+    width: 100%;
+    margin-bottom: 10px;
+    height: 200px;
+  }
+}
+
+// NOTE WARN scrollbar
+/* width */
+::-webkit-scrollbar {
+  width: 3px;
+}
+
+// /* width */
+// ::-webkit-scrollbar {
+//   width: 10px;
+// }
+
+/* Track */
+// ::-webkit-scrollbar-track {
+//   background: #f1f1f1;
+// }
+
+// /* Handle */
+// ::-webkit-scrollbar-thumb {
+//   background: $team-primary;
+// }

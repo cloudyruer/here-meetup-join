@@ -179,7 +179,7 @@
 }
 
 .j-join-bar--vh5 {
-  height: 5vh;
+  bottom: -28vh;
 }
 
 @media only screen and (min-width: 992px) {
@@ -189,7 +189,19 @@
   }
 }
 
+.j-join-bar__toggle {
+  height: 2vh;
+}
+
+.j-join-bar__toggle div {
+  background-color: black;
+  width: 50px;
+  height: 3px;
+  border-radius: 20px;
+}
+
 .j-join-map {
+  overflow: hidden;
   background-color: #f6c327;
   height: calc(100vh - 48px - 56px);
 }
@@ -200,34 +212,38 @@
   }
 }
 
-.j-join-info-box {
-  margin-top: 15px;
+.j-join-bar__info-box {
   overflow: auto;
-  padding: 15px;
+  padding: 10px;
   border: 3px solid #e88239;
-  height: 91%;
+  height: 90%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
 }
 
 @media only screen and (min-width: 992px) {
-  .j-join-info-box {
+  .j-join-bar__info-box {
+    height: calc(100vh - 140px);
+    padding: 15px;
+    margin-top: 10px;
     display: block;
   }
 }
 
 .box {
   width: 300px;
-  height: 220px;
+  height: 100%;
   -ms-flex-negative: 0;
       flex-shrink: 0;
+  margin-right: 10px;
 }
 
 @media only screen and (min-width: 992px) {
   .box {
     -ms-flex-negative: initial;
         flex-shrink: initial;
+    margin-right: 0px;
     width: 100%;
     margin-bottom: 10px;
     height: 200px;
@@ -235,9 +251,5 @@
 }
 
 /* width */
-::-webkit-scrollbar {
-  width: 3px;
-}
-
 /* Track */
 /*# sourceMappingURL=style.css.map */

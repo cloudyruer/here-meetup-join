@@ -29,7 +29,8 @@
 
   // test
   &--vh5 {
-    height: 5vh;
+    // height: 5vh;
+    bottom: -28vh;
   }
 
   //  FIX
@@ -39,12 +40,26 @@
     // NOTE FIX 56px 是 nav 高度
     height: calc(100vh - 56px);
   }
+
+  &__toggle {
+    // background-color: red;
+    // height: 16px;
+    height: 2vh;
+
+    & div {
+      background-color: black;
+      width: 50px;
+      height: 3px;
+      border-radius: 20px;
+    }
+  }
 }
 
 .j-join-map {
+  overflow: hidden;
   // FIX
   background-color: $team-warning;
-  // NOTE FIX 56px 是 nav 高度
+  // NOTE FIX 56px 是 nav ; 高度 48px是 手機板dropdown
   height: calc(100vh - 48px - 56px);
   @include respond(team-lg) {
     // NOTE FIX 56px 是 nav 高度
@@ -52,19 +67,25 @@
   }
 }
 
-.j-join-info-box {
-  margin-top: 15px;
+.j-join-bar__info-box {
+  //   margin-top: 0px;
   //   margin-bottom: 15px;
   overflow: auto;
-  padding: 15px;
+  padding: 10px;
   border: 3px solid $team-primary;
   //   height: 75vh;
-  height: 91%;
+  height: 90%;
 
   //   new
   display: flex;
 
   @include respond(team-lg) {
+    // NOTE FIX 56px 是 nav 高度
+    // 父層是calc(100vh - 56px); 因此除了56外 還要減掉 dropdown
+    height: calc(100vh - 140px);
+
+    padding: 15px;
+    margin-top: 10px;
     display: block;
   }
 }
@@ -72,11 +93,13 @@
 .box {
   //   new
   width: 300px;
-  height: 220px;
+  height: 100%;
   flex-shrink: 0;
+  margin-right: 10px;
 
   @include respond(team-lg) {
     flex-shrink: initial;
+    margin-right: 0px;
     width: 100%;
     margin-bottom: 10px;
     height: 200px;
@@ -85,9 +108,9 @@
 
 // NOTE WARN scrollbar
 /* width */
-::-webkit-scrollbar {
-  width: 3px;
-}
+// ::-webkit-scrollbar {
+//   width: 3px;
+// }
 
 // /* width */
 // ::-webkit-scrollbar {

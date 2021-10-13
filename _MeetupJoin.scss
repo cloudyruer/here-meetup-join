@@ -35,7 +35,7 @@
   }
 
   //  FIX
-  background-color: #ccc;
+  background-color: $team-white;
   @include respond(team-lg) {
     position: initial;
     // NOTE FIX 56px 是 nav 高度
@@ -120,12 +120,13 @@
   display: flex;
   flex-direction: column;
 
-  border: 1px solid black;
+  // border: 1px solid black;
+  box-shadow: 0px 8px 20px -7px rgba(0, 0, 0, 0.51);
   @include respond(team-lg) {
     flex-shrink: initial;
     margin-right: 0px;
     width: 100%;
-    margin-bottom: 10px;
+    margin-bottom: 16px;
     height: 200px;
   }
 

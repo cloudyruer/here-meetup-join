@@ -81,7 +81,7 @@
         <!-- 手機板搜尋選單 end -->
 
         <!-- sidebar start -->
-        <div class="col-lg-5 col-xl-4 order-1 order-md-0 j-join-bar">
+        <div class="col-lg-5 order-1 order-md-0 j-join-bar">
           <!-- 內部 -->
 
           <!-- 搜尋選單 -->
@@ -142,7 +142,34 @@
             <div></div>
           </div>
           <!-- 資訊 box -->
-          <div class="j-join-bar__info-box">
+          <div class="j-join-bar__info-wrap">
+            <div class="j-join-meetup">
+              <!-- 上方圖片 -->
+              <div class="j-join-meetup__img-box">
+                <img src="./chermiti-mohamed-NwN-vtN0cd0-unsplash.jpg" alt="" />
+              </div>
+              <!-- 下方資訊欄 -->
+              <div class="j-join-meetup__info">
+                <!-- 時間 -->
+                <div>TUE, SEP 7,8:00 PM</div>
+                <!-- 標題 -->
+                <div class="j-join-meetup__info--title">
+                  河濱約個跑河濱約個跑
+                </div>
+                <!-- 地址 + 活動類別 -->
+                <div class="d-flex justify-content-between">
+                  <!-- 地址 -->
+                  <div>
+                    <i class="fas fa-map-marker-alt"></i> 台北市 國立台灣大學
+                  </div>
+                  <!-- 活動類別 -->
+                  <div>
+                    <i class="fas fa-hiking j-join-meetup__info--title"></i>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!--  -->
             <div class="box bg-primary"></div>
             <div class="box bg-warning"></div>
             <div class="box bg-danger"></div>
@@ -166,9 +193,10 @@
 
         <!-- map start -->
         <!-- NOTE 10/11 有加入px-0 讓兩邊貼齊 -->
-        <div
+        <!-- <div
           class="col-12 col-lg-7 col-xl-8 order-0 order-md-1 j-join-map px-0"
-        >
+        > -->
+        <div class="col-12 col-lg order-0 order-md-1 j-join-map px-0">
           <img
             class="w-100 h-100"
             src="./marjan-blan-marjanblan-6bXvYyAYVrE-unsplash.jpg"
@@ -185,8 +213,7 @@
       const toggle = document.querySelector(".j-join-bar__toggle");
       const bar = document.querySelector(".j-join-bar");
       toggle.addEventListener("click", () => {
-        console.log(123);
-        bar.classList.toggle("j-join-bar--vh5");
+        bar.classList.toggle("j-join-bar--mobile");
       });
     </script>
   </body>
